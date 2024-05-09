@@ -6,23 +6,18 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('cards', function (Blueprint $table) {
             $table->id();
             $table->string('card_number', 16);
-            $table->date('expiry_date');
+            $table->integer('expiry_month');
+            $table->integer('expiry_year');
             $table->string('cvv', 3);
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('cards');

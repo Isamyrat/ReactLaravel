@@ -40,5 +40,4 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
-/frontend/node_modules
->>>>>>> e7fa515 (init project)
+/react-app/node_modules
